@@ -32,7 +32,7 @@ proxy-groups:
       - 自动选择
       - 直连
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -47,7 +47,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -63,7 +63,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -79,7 +79,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -95,7 +95,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -111,7 +111,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -127,7 +127,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -143,7 +143,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -159,7 +159,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -175,7 +175,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -191,7 +191,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -207,7 +207,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -223,7 +223,23 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
+      - JP 日本
+      - KR 韩国
+      - US 美国
+      - SG 新加坡
+      #      - TK 土耳其
+      - 其它地区
+      - 全部节点
+      - 自动选择
+      - 直连
+  - name: Twitter
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Twitter.png
+    type: select
+    proxies:
+      - 默认节点
+      - HK 香港
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -239,7 +255,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -256,7 +272,7 @@ proxy-groups:
       - 直连
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -271,7 +287,7 @@ proxy-groups:
     proxies:
       - 默认节点
       - HK 香港
-      - TW 台湾省
+      - TW 台湾
       - JP 日本
       - KR 韩国
       - US 美国
@@ -290,7 +306,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
     filter: "(?i)(澳门|🇲🇴|港|🇭🇰|hk|hong)"
-  - name: TW 台湾省
+  - name: TW 台湾
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/China.png
     type: url-test
     include-all: true
@@ -365,6 +381,7 @@ rules:
   - RULE-SET,spotify,Spotify
   - RULE-SET,disney,Disney+
   - RULE-SET,tiktok,TikTok
+  - RULE-SET,twitter,Twitter
   - RULE-SET,steam@cn,国内网站
   - RULE-SET,steam,Steam
   - RULE-SET,pixiv,其他外网
@@ -430,6 +447,12 @@ rule-providers:
     behavior: domain
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
+  twitter:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.list
   steam@cn:
     type: http
     interval: 86400
